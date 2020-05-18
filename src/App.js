@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+import Home from './layouts/home/home';
+import ArtistList from './layouts/artistList/artistList';
+import Artist from './layouts/artist/artist';
+import Album from './layouts/album/album';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <Route path='/' exact component= { Home } />
+        <Route path='/artistList' component= { ArtistList } />
+        <Route path='/artist' component= { Artist } />
+        <Route path='/album' component= { Album } />
+      </div>
+    </Router>
   );
 }
 

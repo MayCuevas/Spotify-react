@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Lazer84';
+  src: local('Lazer84'), url(./shared/Lazer84.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./shared/Roboto-Regular.ttf) format('truetype');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

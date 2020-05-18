@@ -1,0 +1,25 @@
+@import '../../shared/styles.scss';
+
+.home{
+
+  &__container{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content{
+    margin: 1em 2em;
+  }
+  &__title{
+    font-family: $sans-serif;
+    color: $vivid-fuccia;
+  }
+  &__text{
+    color: $vivid-light-blue;
+    font-family: $sans-serif-secondary;
+  }
+}

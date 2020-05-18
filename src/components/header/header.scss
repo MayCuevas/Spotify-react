@@ -1,0 +1,13 @@
+@import '../../shared/styles.scss';
+
+.header-container{
+  background-color: $dark-blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  box-sizing: border-box;
+  width: 100%;
+  color: $vivid-light-blue;
+}
