@@ -1,0 +1,23 @@
+@import '../../shared/styles.scss';
+
+.search{
+  &__image{
+    width: 10px;
+    fill:white;
+  }
+  &__input{
+    padding: .5em;
+    width: 100%;
+    font-family: $sans-serif-secondary;
+    color: $vivid-fuccia;
+    border: 1px solid $vivid-fuccia;
+    border-radius: 10px;
+    background-image: url('./miscellaneous.svg');
+    background-color: $dark-blue;
+    background-size: 5%;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y:center;
+
+  }
+}

@@ -14,12 +14,18 @@
   &__content{
     margin: 1em 2em;
   }
+
   &__title{
     font-family: $sans-serif;
     color: $vivid-fuccia;
   }
+
   &__text{
     color: $vivid-light-blue;
     font-family: $sans-serif-secondary;
+    padding: 1em;
+  }
+  &__search {
+    color:white;
   }
 }

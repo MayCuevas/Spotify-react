@@ -6,8 +6,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 1em 2em;
   box-sizing: border-box;
   width: 100%;
   color: $vivid-light-blue;
+}
+.header__logo{
+  width: 25px;
 }

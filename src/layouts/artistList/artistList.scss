@@ -1,1 +1,10 @@
 @import '../../shared/styles.scss';
+
+
+.artistList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3em;
+}

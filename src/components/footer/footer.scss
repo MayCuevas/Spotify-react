@@ -1,5 +1,11 @@
 @import '../../shared/styles.scss';
 
+.footer{
+  &__link{
+    text-decoration: none;
+    margin:1em;
+  }
+}
 .footer-container{
   background-color: $dark-blue;
   display: flex;

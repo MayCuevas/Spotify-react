@@ -4,11 +4,9 @@ import './footer.scss';
 const Footer = () => {
 	return(
 		<div className='footer-container'>
-			<p>Made with love by
-				<a href='https://github.com/MayCuevas'>
-					May Cuevas
+				<a href='https://github.com/MayCuevas' className='footer__link'>
+					Made with love by May Cuevas
 				</a>
-			</p>
 		</div>
 	);
 }

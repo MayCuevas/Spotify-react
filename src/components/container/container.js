@@ -1,13 +1,14 @@
 import React from 'react';
 import './container.scss';
 
-const Holder = () =>{
+import Item from '../Item/item';
+
+const Holder = (props) =>{
  return (
    <div className='holder__container'>
-     <p>Here goes the list Items</p>
+     <Item />
    </div>
  );
 };
-
 
 export default Holder;
