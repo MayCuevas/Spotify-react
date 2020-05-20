@@ -7,11 +7,19 @@ import Info from '../../components/Info/info';
 import Container from '../../components/container/container';
 
 const ArtistList = () =>{
+
+  const text = {
+    title : 'Artists', 
+    subtitle : 'you are currenly search the ' ,
+    route : 'Home > Artist'
+  }
+
+
   return(
     <div className='container'>
       <Header />
       <div className='artistList'>
-         <Info />
+         <Info text={text} />
          <Container />
       </div>
       <Footer />

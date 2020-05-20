@@ -1,13 +1,13 @@
 import React from 'react';
 import './info.scss';
 
-const Info = () => {
-  return(
+const Info = ({text}) => {
+ return(
     <div className='info'>
       <img className='info__image' />
-      <h2 className='info__title'>Title</h2>
-      <h3 className='info__subtitle'>Subtitle</h3>
-      <p className='info__text'>Route</p>
+      <h2 className='info__title'>{text.title}</h2>
+      <h3 className='info__subtitle'>{text.subtitle}</h3>
+      <p className='info__text'>{text.route}</p>
     </div>
   );
 };
