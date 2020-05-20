@@ -4,7 +4,7 @@ import React,{createContext,useState,useEffect} from 'react';
 const SearchContext = createContext();
 
 const SearchContextProvider = ({children}) =>{
-
+  //este estate, es para los artistas. 
   const [res,setRes]= useState([]);
 
   useEffect(() =>{
@@ -13,7 +13,7 @@ const SearchContextProvider = ({children}) =>{
     setRes(result);
     },[]
 );
-  console.log(res);
+
   return(
     <SearchContext.Provider value ={res}>
         {children}

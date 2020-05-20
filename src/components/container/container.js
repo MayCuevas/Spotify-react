@@ -2,13 +2,14 @@ import React from 'react';
 import './container.scss';
 
 import Item from '../Item/item';
+//container recibe props
+const Container = ({type}) =>{
 
-const Holder = (props) =>{
  return (
    <div className='holder__container'>
-     <Item />
+     <Item data={type} />
    </div>
  );
 };
 
-export default Holder;
+export default Container;

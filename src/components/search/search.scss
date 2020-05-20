@@ -1,23 +1,26 @@
 @import '../../shared/styles.scss';
 
 .search{
+  display: flex;
+  border: 1px solid $vivid-fuccia;
+  border-radius: 10px;
   &__image{
     width: 10px;
     fill:white;
   }
   &__input{
     padding: .5em;
-    width: 100%;
+    width: 80%;
     font-family: $sans-serif-secondary;
     color: $vivid-fuccia;
-    border: 1px solid $vivid-fuccia;
+    border: 0px solid transparent;
     border-radius: 10px;
+  }
+  &__button{
     background-image: url('./miscellaneous.svg');
-    background-color: $dark-blue;
     background-size: 5%;
+    width: 20%;
+    border: 0px solid transparent;
     background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y:center;
-
   }
 }
