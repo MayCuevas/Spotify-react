@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useEffect} from 'react';
 import './artistList.scss';
 
 import Header from '../../components/header/header';
@@ -7,13 +7,15 @@ import Info from '../../components/Info/info';
 import Search from '../../components/search/search';
 import Container from '../../components/container/container';
 
-import SearchContext from '../../contexts/searchContext'
+import {getArtistProfile} from '../../services/search';
+
 
 const ArtistList = () =>{
+ 
 
-  const context = useContext(SearchContext)
-  
-
+const list = localStorage.getItem('resultList');
+const listItem =  JSON.parse(list);
+console.log(list);
  const query = localStorage.getItem('query');
 
   const text = {
@@ -28,7 +30,7 @@ const ArtistList = () =>{
       <Search />
       <div className='artistList'>
          <Info text = {text} />
-         <Container type = {context}/>
+         <Container type = {listItem} route ='artist'/>
       </div>
       <Footer />
     </div>

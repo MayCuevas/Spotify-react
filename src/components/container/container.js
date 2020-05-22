@@ -3,11 +3,10 @@ import './container.scss';
 
 import Item from '../Item/item';
 //container recibe props
-const Container = ({type}) =>{
-
+const Container = (props) =>{
  return (
    <div className='holder__container'>
-     <Item data={type} />
+     <Item data={props.type}  route={props.route} />
    </div>
  );
 };

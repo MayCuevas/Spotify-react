@@ -1,3 +1,4 @@
+
 const token = localStorage.getItem('auth');
 
 //funcion que arma la base de la llamada
@@ -9,19 +10,22 @@ const getQuery = async (query) => {
  return await fetch(url,{headers});
 }
 
-const SearchArtists = async (query) => {
+export const SearchArtists = async (query) => {
   const call = await getQuery("search?q=" + (query) + "*&type=artist&limit=5");
   const res = await call.json();
-  console.log(res);
-  //siempre voy a buscar por artista 
-  window.localStorage.setItem('res', JSON.stringify(res.artists.items));
-  
+  window.localStorage.setItem('resultList', JSON.stringify(res.artists.items));
 };
 
-const getArtistProfile = async (id) => {
-  const call = await getQuery(`artist/${id}`);
-  const res = await call.json();
-  window.localStorage.setItem('artist', JSON.stringify(res));
+export const getArtistProfile = async (id) => {
+  const call = await getQuery(`artists/${id}`);
+  const artist = await call.json();
+  window.localStorage.setItem('artist', JSON.stringify(artist));
 };
 
-export default SearchArtists;
+
+export const getAlbums = async (id) => {
+  const call = await getQuery(`artists/${id}/albums`);
+  const albums = await call.json();
+  window.localStorage.setItem('albums', JSON.stringify(albums));
+};
+

@@ -1,16 +1,16 @@
 import React from 'react';
 import './search.scss';
 
-import SearchArtists from '../../services/search';
-import {Link} from "react-router-dom";
+import {SearchArtists} from '../../services/search';
+
 
 const Search = ({redirect}) =>{
 console.log(redirect);
 const onChanges = (event) => {
-  if(event.target.value != ''){
+  if(event.target.value !== ''){
     event.persist();
     let query = event.target.value;
-    SearchArtists(query);
+     SearchArtists(query);
     localStorage.setItem('query',query);
   };
 };
@@ -21,7 +21,7 @@ const onClick = (event) =>{
 return (
   <div className="search">
      <input type='text' placeholder='search' className='search__input' onChange={onChanges} />
-     <input type='submit' class="search__button" onClick={onClick}/>
+     <input type='submit' className="search__button" onClick={onClick}/>
   </div>
 );
 }

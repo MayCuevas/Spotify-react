@@ -4,18 +4,11 @@ import React,{createContext,useState,useEffect} from 'react';
 const SearchContext = createContext();
 
 const SearchContextProvider = ({children}) =>{
-  //este estate, es para los artistas. 
-  const [res,setRes]= useState([]);
 
-  useEffect(() =>{
-    const artist = window.localStorage.getItem('res');
-    const result = window.JSON.parse(artist)
-    setRes(result);
-    },[]
-);
+  useEffect(() =>{ },[]);
 
   return(
-    <SearchContext.Provider value ={res}>
+    <SearchContext.Provider value ={''}>
         {children}
     </SearchContext.Provider>
   );
