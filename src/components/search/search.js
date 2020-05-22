@@ -1,6 +1,8 @@
 import React from 'react';
 import './search.scss';
 
+
+
 import {SearchArtists} from '../../services/search';
 
 
@@ -20,8 +22,8 @@ const onClick = (event) =>{
 
 return (
   <div className="search">
-     <input type='text' placeholder='search' className='search__input' onChange={onChanges} />
-     <input type='submit' className="search__button" onClick={onClick}/>
+    <input type='submit' className="search__button" onClick={onClick} />
+    <input type='text' placeholder='search' className='search__input' onChange={onChanges} />
   </div>
 );
 }

@@ -1,12 +1,16 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
 import './home.scss';
 
 import Login from '../../services/auth';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import Search from '../../components/search/search';
+import Item from '../../components/Item/item';
 
 const Home = () =>{
+
+    const [favourites,setFavourites] = useState([]);
+
 
     useEffect(() => {
         Login();

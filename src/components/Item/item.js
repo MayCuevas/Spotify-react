@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import "./item.scss";
 import { getArtistProfile,getAlbums, getAlbumTracks } from "../../services/search";
 
 
 const Item = ({ data, route, type }) => {
-  console.log(data)
-  if (data) {
+
+  if ( data ) {
     return (
       <div className='holder__container'>
         {data.map((result) => (
@@ -13,19 +13,25 @@ const Item = ({ data, route, type }) => {
               onClick={
                 async ()=>{ 
                   if(route != ''){
-                    await  getArtistProfile(result.id)
-                    await getAlbums(result.id)
-                    await getAlbumTracks(result.id)
-                    window.location.href = `/${route}/${result.id}`}
+                    await  getArtistProfile( result.id )
+                    await getAlbums( result.id )
+                    await getAlbumTracks( result.id )
+                    window.location.href = `/${ route }/${ result.id }`}
                 }
                }>
               <div className="item__text">
-                <h4 className="item__text--title">{result.name}</h4>
+                <h4 className="item__text--title">{ result.name }</h4>
                 {type === 'track'?
-              <iframe src={`https://open.spotify.com/embed?uri=${result.uri}`}></iframe>: 
-              <div class="track"> 
-               <h6 className="item__text--subtitle">{result.type}</h6>
-               <img src ={ result.images }
+              <iframe
+                  className='item__iframe'
+                  src={`https://open.spotify.com/embed?uri=${ result.uri }`}
+                  width="300"
+                  height="100"
+                  frameborder="0"
+                  allow="encrypted-media" /> : 
+              <div class="item__track"> 
+              <h6 className="item__text--subtitle">{ result.type }</h6>
+              <img src ={ result.images[0]}
                  alt='item'
                  className= 'item__image' />
               </div>

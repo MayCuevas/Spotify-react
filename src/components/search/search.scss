@@ -4,22 +4,30 @@
   display: flex;
   border: 1px solid $vivid-fuccia;
   border-radius: 10px;
+
   &__image{
     width: 10px;
     fill:white;
   }
+  
   &__input{
     padding: .5em;
     width: 80%;
+    text-align: center;
+    justify-content: center;
     font-family: $sans-serif-secondary;
+    background-color: transparent;
     color: $vivid-fuccia;
     border: 0px solid transparent;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
   }
+  
   &__button{
-    background-image: url('./miscellaneous.svg');
-    background-size: 5%;
+    background-image: url('./icons8-google-web-search-24.png');
+    background-size: contain;
+    color: transparent;
     width: 20%;
+    background-color: transparent;
     border: 0px solid transparent;
     background-repeat: no-repeat;
   }

@@ -13,6 +13,11 @@
   }
   &__content{
     margin: 1em 2em;
+    margin: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__title{
@@ -24,6 +29,7 @@
     color: $vivid-light-blue;
     font-family: $sans-serif-secondary;
     padding: 1em;
+    text-align: center;
   }
   &__search {
     color:white;

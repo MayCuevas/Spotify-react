@@ -7,13 +7,14 @@
 }
 
  .item{
+   margin :1em;
+   
    &__container{
      display: flex;
      flex-direction: row;
      align-items: center;
      justify-content: space-around;
      background-color:$opaque-lightViolet;
-     border-radius: 20px;
      border: 1px solid $opaque-lightViolet;
      margin: 1em;
      box-sizing: border-box;
@@ -25,12 +26,17 @@
      object-fit: cover;
      box-sizing: border-box;
    }
+   &__iframe{
+     width: 100%;
+   }
+
    &__text{
      margin: 0 1em;
 
      &--title{
        color: $vivid-orange;
        font-family: $sans-serif-secondary;
+       margin:1em;
      }
      &--subtitle{
       font-family: $sans-serif-secondary;
