@@ -1,5 +1,10 @@
  @import '../../shared/styles.scss';
 
+ .holder__container{
+  width: 100%;
+  background-color: $opaque-violet;
+  color:white;
+}
 
  .item{
    &__container{

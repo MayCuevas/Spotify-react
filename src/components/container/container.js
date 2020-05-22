@@ -6,7 +6,7 @@ import Item from '../Item/item';
 const Container = (props) =>{
  return (
    <div className='holder__container'>
-     <Item data={props.type}  route={props.route} />
+   
    </div>
  );
 };

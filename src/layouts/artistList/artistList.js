@@ -1,13 +1,13 @@
-import React,{useContext, useEffect} from 'react';
+import React from 'react';
 import './artistList.scss';
 
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import Info from '../../components/Info/info';
 import Search from '../../components/search/search';
-import Container from '../../components/container/container';
+import Item from '../../components/Item/item';
 
-import {getArtistProfile} from '../../services/search';
+
 
 
 const ArtistList = () =>{
@@ -15,7 +15,7 @@ const ArtistList = () =>{
 
 const list = localStorage.getItem('resultList');
 const listItem =  JSON.parse(list);
-console.log(list);
+console.log(typeof listItem);
  const query = localStorage.getItem('query');
 
   const text = {
@@ -30,7 +30,7 @@ console.log(list);
       <Search />
       <div className='artistList'>
          <Info text = {text} />
-         <Container type = {listItem} route ='artist'/>
+         <Item data = {listItem}  route='artist' type='artist' />
       </div>
       <Footer />
     </div>

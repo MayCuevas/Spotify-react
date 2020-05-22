@@ -21,8 +21,8 @@ const App = () => {
        <Router>
       <div className='App'>
         <Route path='/' exact component= { Home } />
-        <Route path='/result' component= { ArtistList } />}
-        <Route path='/artist/:id'  component={ Artist } />
+        <Route path='/result' component= { ArtistList } />
+        <Route path='/artist/:id'  component= { Artist } />
         <Route path='/album' component= { Album } />
       </div>
     </Router>

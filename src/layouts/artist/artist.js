@@ -7,33 +7,26 @@ import Footer from '../../components/footer/footer';
 import Info from '../../components/Info/info';
 import {getArtistProfile} from '../../services/search';
 
-const Artist = (props) =>{
+const Artist = () =>{
  const [Artist,setArtist] = useState(
    JSON.parse(localStorage.getItem('artist')));
+   const [Album,setAlbum] = useState(
+    JSON.parse(localStorage.getItem('albums')));
+    let album = localStorage.getItem('albums');
+    let listAlbum = JSON.parse(album);
 
-let data = ''
-let item = {};
-  //aca traigo al artista 
-
-//// const id = props.location.state;
- //   getArtistProfile(id);
-    data = localStorage.getItem('artist'); 
-  item = JSON.parse(data);
-
-//aca armo el objeto para info 
+console.log(listAlbum);
 const text = {
   title : Artist.name, 
   subtitle : Artist.type,
   route : `Home > Artist>${Artist.name}` 
 }
-
-//aca tiro el resultado 
   return(
     <div className='container'>
       <Header />
       <div className="artist">
          <Info text = {text} />
-         <Item ></Item>
+         <Item data = {listAlbum.items} route='album' type='album' ></Item>
       </div>
       <Footer />
     </div>

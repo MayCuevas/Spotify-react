@@ -1,7 +1,7 @@
 
 const token = localStorage.getItem('auth');
 
-//funcion que arma la base de la llamada
+
 const getQuery = async (query) => {
   const url = `https://api.spotify.com/v1/${query}`;
   const headers = {
@@ -29,3 +29,9 @@ export const getAlbums = async (id) => {
   window.localStorage.setItem('albums', JSON.stringify(albums));
 };
 
+
+export const getAlbumTracks = async (id) => {
+  const call = await getQuery(`albums/${id}/tracks`);
+  const tracks = await call.json();
+  window.localStorage.setItem('tracks', JSON.stringify(tracks));
+};
