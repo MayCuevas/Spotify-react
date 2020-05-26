@@ -11,7 +11,6 @@ import Item from '../../components/Item/item';
 
 const ArtistList = () =>{
  
-
 const list = localStorage.getItem( 'resultList' );
 const listItem =  JSON.parse( list );
 console.log( listItem );
@@ -28,8 +27,8 @@ console.log( listItem );
     <div className='container'>
       <Header />
       <div className='artistList'>
-         <Info text = {text} />
-         <Item data = {listItem}  route='artist' type='artist' />
+         <Info text = { text } />
+         <Item data = { listItem }  route='artist' type='artist' />
       </div>
       <Footer />
     </div>

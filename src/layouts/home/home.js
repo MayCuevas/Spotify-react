@@ -8,9 +8,8 @@ import Item from '../../components/Item/item';
 import StorageContext from '../../contexts/localStorage';
 
 const Home = () =>{
-    const favorites = useContext(StorageContext);
-    const [favList, setFavlist] = useState();
-
+    const [favList, setFavlist] = useState([]);
+    let favorites = useContext(StorageContext);
     useEffect(()=>{
         setFavlist(favorites);
     })
@@ -27,10 +26,12 @@ const Home = () =>{
                     <div className='home__search'>
                     <Search />
                     {
-                      favorites != undefined ?<div className='favorites'>
-                          <h3 className='home__text'> Favorites</h3>
-                          <Item data = { favList } type= 'track' />
-                          </div> : null 
+                      favList != []?
+                      <div className='favorites'>
+                        <h3 className='home__text'>Favorites</h3>
+                        <Item data = { favList } type= 'track' />
+                        </div> :
+                        null 
                     }
                     </div>
                 </div>

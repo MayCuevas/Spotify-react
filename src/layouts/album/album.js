@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{ useState } from 'react';
 import './album.scss';
 
 import Header from '../../components/header/header';
@@ -8,11 +8,11 @@ import Info from '../../components/Info/info';
 
 
 const Album = () =>{
-  const [Album,setAlbum] = useState(
-    JSON.parse(localStorage.getItem('albumData')));
+  const [ Album,setAlbum ] = useState(
+    JSON.parse(localStorage.getItem( 'albumData' )));
 
-    let tracks = localStorage.getItem('tracks');
-    let listTracks = JSON.parse(tracks);
+    let tracks = localStorage.getItem( 'tracks' );
+    let listTracks = JSON.parse( tracks) ;
 
     const text = {
       image : Album.images[0].url,
@@ -21,16 +21,14 @@ const Album = () =>{
       route : 'Home > Artist > Album '
     }
 
-
-
   return(
     <div className='container'>
-      <Header />
+    <Header />
     <div className='album'>
-      <Info text={text} />
-      <Item data={listTracks.items} route='' type='track' />
-      <Footer />
+      <Info text={ text } />
+      <Item data={ listTracks.items } route='' type='track' />
     </div>
+    <Footer />
     </div>
   );
 };

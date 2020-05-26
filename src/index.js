@@ -5,7 +5,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { LoginContextProvider } from './contexts/LoginContext';
 
-
 ReactDOM.render(
   <React.StrictMode>
      <LoginContextProvider>
