@@ -15,12 +15,16 @@ const Favs = ( props ) => {
       setState( false);
     }
   };
+
+  const color = {
+    'color' : 'white'
+  }
   return (
     <ToggleButton
       value="favorite"
       aria-label="favorite"
       onClick={OnClick}>
-    <FavoriteIcon color="disabled" />
+    <FavoriteIcon style={color} />
     </ToggleButton>
   );
 };

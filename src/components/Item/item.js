@@ -14,7 +14,7 @@ const Item = ({ data, route, type }) => {
             className=''
               onClick={
                 async ()=>{ 
-                  if( route != '' ){
+                  if( route !== '' ){
                     await  getArtistProfile( result.id )
                     await getAlbums( result.id )
                     await getAlbumTracks( result.id )

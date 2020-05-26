@@ -19,21 +19,21 @@ const Home = () =>{
             <Header />
             <div className= 'home__container'>
                 <div className='home__content'>
-                    <h4 className='home__title'>Welcome to</h4>
-                    <h2 className='home__title'>Spoti-search</h2>
-                    <p className='home__text'>Search your favourites songs over Spotify,<br />
+                    <h4 className='home__content--title'>Welcome to</h4>
+                    <h2 className='home__content--title'>Spoti-search</h2>
+                    <p className='home__content--text'>Search your favourites songs over Spotify,<br />
                     just enter an artist's name in the following search box and enjoy!</p>
                     <div className='home__search'>
-                    <Search />
+                     <Search />
+                    </div>
                     {
-                      favList != []?
+                      favList ?
                       <div className='favorites'>
-                        <h3 className='home__text'>Favorites</h3>
+                        <h3 className='home__content--text'>Favorites</h3>
                         <Item data = { favList } type= 'track' />
                         </div> :
                         null 
                     }
-                    </div>
                 </div>
             </div>
             <Footer />

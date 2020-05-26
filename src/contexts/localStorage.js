@@ -1,15 +1,20 @@
 
-import React,{createContext} from 'react';
+import React,{createContext, useEffect} from 'react';
 
 const StorageContext = createContext();
   
 const StorageContextProvider = ({children}) =>{
-  const favoritesList = localStorage.getItem('favorites');
   let favs = []
-  if(favoritesList != undefined){
-  const favorites = JSON.parse(favoritesList);
-  favs.push(favorites[0].result);
-  }
+  useEffect(()=>{
+    const favoritesList = localStorage.getItem('favorites');
+    if(favoritesList !== undefined){
+      const favorites = JSON.parse(favoritesList)
+      if(favorites){
+      favs.push(favorites[0].result);
+      }
+    }
+  })
+  
   
   return(
     <StorageContext.Provider value ={ favs }>
