@@ -5,9 +5,12 @@ const StorageContext = createContext();
   
 const StorageContextProvider = ({children}) =>{
 const favoritesList = localStorage.getItem('favorites');
+let favs = []
+if(favoritesList != undefined){
 const favorites = JSON.parse(favoritesList);
-const favs = [favorites[0].result]
-console.log(favs)
+favs = [favorites.result]
+}
+
 
   return(
     <StorageContext.Provider value ={ favs }>

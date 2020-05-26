@@ -32,11 +32,11 @@ const Item = ({ data, route, type }) => {
                   src={`https://open.spotify.com/embed?uri=${ result.uri }`}
                   width="300"
                   height="100"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="encrypted-media" />
               </div> : 
               <div class="item__track">
-              <img src ={ result.images[0].url }
+              <img src ={result.images[0]  ? result.images[0].url : '' }
                  alt='item'
                  className= 'item__image' />
               <h6 className="item--subtitle">{ result.type }</h6>

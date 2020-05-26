@@ -27,8 +27,8 @@ const Home = () =>{
                     <div className='home__search'>
                     <Search />
                     {
-                      favorites != undefined ?<div>
-                          <h1 className='home__text'> Favorites</h1>
+                      favorites != undefined ?<div className='favorites'>
+                          <h3 className='home__text'> Favorites</h3>
                           <Item data = { favList } type= 'track' />
                           </div> : null 
                     }

@@ -21,7 +21,7 @@
    }
    &__iframe{
      width: 100%;
-     margin:.2em;
+     box-sizing: border-box;
    }
     &--title{
        color: $vivid-fuccia;

@@ -5,13 +5,20 @@ import FavoriteIcon from '@material-ui/icons/FavoriteBorderOutlined';
 
 
 const Favs = (props) =>{
- const [enable] = useState(true)
-
+ const [enable,setState] = useState(false)
+let favs = [];
 const OnClick = ()=>{
- let favs = {};
-   favs = props
-  let favorites = JSON.stringify(favs);
-  localStorage.setItem('favorites', favorites);
+  if(enable){
+    favs.push(...props);
+    let favorites = JSON.stringify(favs);
+    localStorage.setItem('favorites', favorites);
+    setState(true);
+  }else{
+    let favs = [];
+    favs = props
+    let favorites = JSON.stringify(favs);
+    localStorage.setItem('favorites', favorites);
+  }
 }
  return(
   <ToggleButton value="favorite" aria-label="favorite" onClick={OnClick}>
