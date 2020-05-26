@@ -3,9 +3,19 @@
 
 .info{
   margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__title{
     color: $vivid-orange;
     font-family: $sans-serif;
+    text-align: center;
+  }
+  &__image{
+    width: 50%;
+    border-radius: 100px;
+    margin: 1em;
   }
   &__subtitle{
     color: $vivid-light-blue;

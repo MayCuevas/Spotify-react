@@ -23,7 +23,7 @@ const Header = () =>{
         <img alt='logo' src={process.env.PUBLIC_URL + '/icons/Spotify_Icon_RGB_green.png'}  className='header__logo' />
        </Link>
       <Search />   
-     <button onClick={click}></button>
+     <button className='header-container__searchButton' onClick={click}></button>
     </div>
   );
  }else{
@@ -32,7 +32,7 @@ const Header = () =>{
   <Link to= '/' >
     <img alt='logo' src={process.env.PUBLIC_URL + '/icons/Spotify_Icon_RGB_green.png'}  className='header__logo' />
    </Link> 
- <button onClick={click}></button>
+ <button className='header-container__searchButton'  onClick={click}></button>
 </div>
   )}
 };

@@ -10,15 +10,16 @@ import Info from '../../components/Info/info';
 const Artist = () =>{
  const [Artist,setArtist] = useState(
    JSON.parse(localStorage.getItem('artist')));
-    let album = localStorage.getItem('albums');
-    let listAlbum = JSON.parse(album);
+
+  let album = localStorage.getItem('albums');
+  let listAlbum = JSON.parse(album);
 
 console.log(listAlbum);
 const text = {
   title : Artist.name, 
   subtitle : Artist.type,
   route : `Home > Artist>${Artist.name}` ,
-  image : Artist.images[0]
+  image : Artist.images[0].url
 }
   return(
     <div className='container'>

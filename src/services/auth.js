@@ -18,8 +18,9 @@ const Login =  () => {
   if (LocationToken) {
     localStorage.setItem('auth', LocationToken);
    window.setInterval(() => {
-      localStorage.clear('auth');
-    }, 300000);
+      localStorage.clear();
+      getToken();
+    },300000);
   }else{
     getToken();
   }

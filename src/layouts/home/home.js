@@ -1,21 +1,20 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useContext, useState} from 'react';
 import './home.scss';
 
-import Login from '../../services/auth';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import Search from '../../components/search/search';
 import Item from '../../components/Item/item';
+import StorageContext from '../../contexts/localStorage';
 
 const Home = () =>{
+    const favorites = useContext(StorageContext);
+    const [favList, setFavlist] = useState();
 
-    const [favourites,setFavourites] = useState([]);
-
-
-    useEffect(() => {
-        Login();
-        });
-
+    useEffect(()=>{
+        setFavlist(favorites);
+    })
+    
     return(
         <div className='container'>
             <Header />
@@ -26,10 +25,15 @@ const Home = () =>{
                     <p className='home__text'>Search your favourites songs over Spotify,<br />
                     just enter an artist's name in the following search box and enjoy!</p>
                     <div className='home__search'>
-                    <Search redirect='/result/' />
+                    <Search />
+                    {
+                      favorites != undefined ?<div>
+                          <h1 className='home__text'> Favorites</h1>
+                          <Item data = { favList } type= 'track' />
+                          </div> : null 
+                    }
                     </div>
                 </div>
-            {/* <Container  /> */}
             </div>
             <Footer />
         </div>

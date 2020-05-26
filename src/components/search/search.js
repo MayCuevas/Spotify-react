@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './search.scss';
 
 
@@ -6,18 +6,21 @@ import './search.scss';
 import {SearchArtists} from '../../services/search';
 
 
-const Search = ({redirect}) =>{
-console.log(redirect);
-const onChanges = (event) => {
-  if(event.target.value !== ''){
-    event.persist();
-    let query = event.target.value;
-     SearchArtists(query);
+
+
+
+const Search = () =>{
+let query = ''
+const onChanges = (event) => { 
+  event.persist();
+  if(event.target.value !== ''){     
+     query = event.target.value;
     localStorage.setItem('query',query);
+    SearchArtists(query);
   };
 };
 const onClick = (event) =>{
-  window.location.assign(redirect);
+  window.location.assign(/result/);
 }
 
 return (

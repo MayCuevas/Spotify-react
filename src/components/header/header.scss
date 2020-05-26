@@ -10,7 +10,16 @@
   box-sizing: border-box;
   width: 100%;
   color: $vivid-light-blue;
+  position:sticky;
 }
 .header__logo{
   width: 25px;
+}
+
+@media screen and (min-width:640px){
+  .header-container{
+    &__searchButton{
+      display: none;
+    }
+  }
 }
